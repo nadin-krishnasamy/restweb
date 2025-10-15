@@ -28,7 +28,207 @@ Validate the HTML code.
 Publish the website in the given URL.
 
 ## PROGRAM:
+'''
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Restaurant Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { margin:0; font-family:Arial,sans-serif; background:#fafafa; color:#222; }
+    nav { background:#292929; color:#fff; }
+    nav ul { list-style:none; margin:0; padding:0; display:flex; justify-content:center; }
+    nav li { margin:0; }
+    nav a { display:block; padding:1em 2em; color:#fff; text-decoration:none; }
+    nav a:focus, nav a:hover { background:#ffbc42; outline:2px solid #ffbc42; color:#222;}
+    main { max-width:800px; margin:2em auto; padding:2em; border-radius:8px; background:#fff; box-shadow:0 2px 10px #0001; }
+    h1, h2 { color:#894800;}
+    .hidden { display:none; }
+    label { display:block; margin: 1em 0 0.5em; }
+    input, textarea, select, button { width:100%; max-width:400px; padding:0.5em; font-size:1em; margin-bottom:1em; }
+    button { background:#ffbc42; border:none; cursor:pointer; }
+    button:focus { outline:2px solid #894800;}
+    table { width:100%; border-collapse: collapse; margin-top:1em;}
+    th, td { border:1px solid #ddd; padding:0.75em;}
+    th { background-color:#ffe2b0;}
+    .worker-card { padding:1em; border:1px solid #ccc; border-radius:5px; margin:1em 0;}
+    .active { background: #ffbc42 !important; color: #222 !important;}
+  </style>
+</head>
+<body>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="#home" id="nav-home" aria-current="page">Home</a></li>
+      <li><a href="#menu" id="nav-menu">Menu</a></li>
+      <li><a href="#workers" id="nav-workers">Workers</a></li>
+      <li><a href="#contact" id="nav-contact">Contact</a></li>
+      <li><a href="#order" id="nav-order">Order</a></li>
+      <li><a href="#feedback" id="nav-feedback">Feedback</a></li>
+    </ul>
+  </nav>
+  <main>
+    <!-- Home Page -->
+    <section id="home-section">
+      <h1>Welcome to Smart Restaurant</h1>
+      <p>Experience the best dining, exceptional service, and a menu curated for every taste.</p>
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800" alt="Beautiful Restaurant Interior" style="width:100%;border-radius:5px;">
+    </section>
 
+    <!-- Menu Page -->
+    <section id="menu-section" class="hidden">
+      <h2>Menu</h2>
+      <table aria-label="Menu Table">
+        <thead>
+          <tr><th>Dish</th><th>Description</th><th>Price</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Margherita Pizza</td><td>Classic mozzarella, tomato, basil</td><td>₹300</td></tr>
+          <tr><td>Pasta Alfredo</td><td>Creamy Alfredo sauce with fettuccine</td><td>₹400</td></tr>
+          <tr><td>Grilled Paneer</td><td>Paneer marinated and grilled to perfection</td><td>₹350</td></tr>
+          <tr><td>Chocolate Lava Cake</td><td>Rich chocolate cake with a molten center</td><td>₹200</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Workers Page -->
+    <section id="workers-section" class="hidden">
+      <h2>Our Team</h2>
+      <div class="worker-card" tabindex="0">
+        <h3>Chef Anjali Sharma</h3>
+        <p>Head Chef with a passion for international cuisine and over 15 years of experience.</p>
+      </div>
+      <div class="worker-card" tabindex="0">
+        <h3>Rahul Gupta</h3>
+        <p>Restaurant Manager known for ensuring a memorable dining experience for guests.</p>
+      </div>
+      <div class="worker-card" tabindex="0">
+        <h3>Lily Fernandes</h3>
+        <p>Lead Waiter with a warm smile and dedication to top-quality service.</p>
+      </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact-section" class="hidden">
+      <h2>Contact Us</h2>
+      <form aria-label="Contact Form">
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" name="contact-name" required>
+        <label for="contact-email">Email</label>
+        <input type="email" id="contact-email" name="contact-email" required>
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p>Email: info@smartrestaurant.com | Phone: +91 12345 67890</p>
+      <p>Address: 101 Cuisine Lane, Food City, India</p>
+    </section>
+
+    <!-- Order Page -->
+    <section id="order-section" class="hidden">
+      <h2>Order Online</h2>
+      <form aria-label="Order Form">
+        <label for="order-dish">Select Dish</label>
+        <select id="order-dish" name="order-dish" required>
+          <option value="">Choose a dish</option>
+          <option>Margherita Pizza</option>
+          <option>Pasta Alfredo</option>
+          <option>Grilled Paneer</option>
+          <option>Chocolate Lava Cake</option>
+        </select>
+        <label for="order-qty">Quantity</label>
+        <input type="number" id="order-qty" name="order-qty" min="1" max="10" value="1" required>
+        <label for="order-address">Delivery Address</label>
+        <textarea id="order-address" name="order-address" rows="3" required></textarea>
+        <button type="submit">Place Order</button>
+      </form>
+    </section>
+
+    <!-- Feedback Page -->
+    <section id="feedback-section" class="hidden">
+      <h2>Feedback</h2>
+      <form aria-label="Feedback Form">
+        <label for="feedback-name">Name (optional)</label>
+        <input type="text" id="feedback-name" name="feedback-name">
+        <label for="feedback-comments">Your Comments</label>
+        <textarea id="feedback-comments" name="feedback-comments" rows="4" required></textarea>
+        <label for="feedback-rating">Rating</label>
+        <select id="feedback-rating" name="feedback-rating" required>
+          <option value="">Choose rating</option>
+          <option>5 - Excellent</option>
+          <option>4 - Good</option>
+          <option>3 - Average</option>
+          <option>2 - Fair</option>
+          <option>1 - Poor</option>
+        </select>
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+  </main>
+  <footer style="background:#292929;color:#fff;text-align:center;padding:1em;">
+    Smart Restaurant &copy; 2025 · All Rights Reserved
+  </footer>
+  <script>
+    // Accessibility: manage page navigation via hash, keyboard accessibility.
+    const sections = {
+      "#home": "home-section",
+      "#menu": "menu-section",
+      "#workers": "workers-section",
+      "#contact": "contact-section",
+      "#order": "order-section",
+      "#feedback": "feedback-section"
+    };
+
+    function showSection(hash) {
+      let found = false;
+      for (const [h, id] of Object.entries(sections)) {
+        const section = document.getElementById(id);
+        const nav = document.getElementById("nav-" + id.replace('-section',''));
+        if(h === hash) {
+          section.classList.remove("hidden");
+          section.setAttribute('tabindex', '-1');
+          if(nav) nav.classList.add('active');
+          found = true;
+          // focus heading for screen readers
+          const heading = section.querySelector('h1,h2');
+          if(heading) heading.focus && heading.focus();
+        } else {
+          section.classList.add("hidden");
+          if(nav) nav.classList.remove('active');
+        }
+      }
+      return found;
+    }
+
+    function handleHashChange() {
+      let hash = window.location.hash || "#home";
+      if(!sections[hash]) hash = "#home";
+      showSection(hash);
+      // Update aria-current for nav links
+      document.querySelectorAll('nav a').forEach(a => {
+        a.setAttribute('aria-current', (a.getAttribute('href') === hash) ? 'page' : 'false');
+      });
+    }
+
+    // For accessibility: focus style for tab navigation.
+    document.body.addEventListener('keydown', function(e) {
+      if(e.key==='Tab') document.body.classList.add('user-is-tabbing');
+    });
+
+    // On nav click, prevent default jump and use the JS to swap sections accessibly.
+    document.querySelectorAll('nav a').forEach(a => {
+      a.addEventListener('click', function(e){
+        window.location.hash = a.getAttribute('href');
+        e.preventDefault();
+      });
+    });
+
+    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('DOMContentLoaded', handleHashChange);
+  </script>
+</body>
+</html>
+'''
 
 ## OUTPUT:
 
