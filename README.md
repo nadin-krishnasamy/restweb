@@ -1,5 +1,5 @@
 # Ex.07 Restaurant Website
-## Date:
+## Date:15/10/2025
 
 ## AIM:
 To develop a static Restaurant website to display the food items and services provided by them.
@@ -72,7 +72,8 @@ Publish the website in the given URL.
     <section id="home-section">
       <h1>Welcome to Smart Restaurant</h1>
       <p>Experience the best dining, exceptional service, and a menu curated for every taste.</p>
-      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800" alt="Beautiful Restaurant Interior" style="width:100%;border-radius:5px;">
+      <img src=<img width="999" height="664" alt="Screenshot 2025-10-24 085757" src="https://github.com/user-attachments/assets/11f8de73-d3b2-4f28-aa99-d34b657376a6" />
+" alt="Beautiful Restaurant Interior" style="width:100%;border-radius:5px;">
     </section>
 
     <!-- Menu Page -->
@@ -231,6 +232,13 @@ Publish the website in the given URL.
 '''
 
 ## OUTPUT:
+<img width="549" height="488" alt="Screenshot 2025-10-24 090107" src="https://github.com/user-attachments/assets/12c54fac-622d-4fe7-8add-2562420b8935" />
+<img width="945" height="496" alt="Screenshot 2025-10-24 085929" src="https://github.com/user-attachments/assets/df95b296-ccdb-4f75-bf39-d1fa8611eebd" />
+<img width="691" height="473" alt="Screenshot 2025-10-24 085936" src="https://github.com/user-attachments/assets/d8ab5db0-f5ba-4993-9494-cfe57ef236bb" />
+<img width="621" height="480" alt="Screenshot 2025-10-24 085942" src="https://github.com/user-attachments/assets/91abcbde-c095-4848-8d4b-07eea8b78c86" />
+<img width="620" height="419" alt="Screenshot 2025-10-24 085948" src="https://github.com/user-attachments/assets/b9b9c58e-48d1-4fae-ba18-c1bcba1f02ad" />
+<img width="679" height="421" alt="Screenshot 2025-10-24 085955" src="https://github.com/user-attachments/assets/0bfd01c3-0582-4761-b8d3-57ec661730e0" />
+
 
 
 ## RESULT:
